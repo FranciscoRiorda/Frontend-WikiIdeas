@@ -39,20 +39,23 @@ const Buscador = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Buscar..."
-          name="search"
-          autoComplete="off"
-          onChange={handleChange}
-        />
-        <input type="submit" value="Buscar" ></input>
+      <div className="colorBuscador">
+      <br/>
+      <h1 className="text-center">Buscar en Enciclopedia</h1>
+    <div className="text-center">
+    <form className="d-flex buscadorStyles"  onSubmit={handleSubmit}>
+      <input className="form-control me-2" name="search" type="text" autoComplete="off" placeholder="Buscar" aria-label="Search" />
+        <button className="btn btn-success" type="submit" onChange={handleChange}>Search</button>
       </form>
-      <p>Resultados: {search}</p>
-      <div>
-        {resultados ? <Resultados resultados={resultados} /> : null}
+      <br/>
       </div>
+      <p className="text-center h3">Resultados: {search}</p>
+      <div className="card container" style={{width: '18rem'}} >
+       <div className="card-body" >
+        {resultados ? <Resultados resultados={resultados} /> : null}
+       </div>
+      </div>
+    </div>
     </>
   );
 };
