@@ -1,0 +1,59 @@
+.contenedorSlider{
+    width: 100%;
+    height: 700px;
+    background-image: url('../../../public/img/slide-enciclopdia.jpg');
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.fondo{
+    background-color: rgba(0, 0, 0, 0.642) ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fondo>div>h1{
+    color: white;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+}
+.formBuscador{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+.inputForm{
+    width: 50%;
+    height: 70px;
+    background: none;
+    border: solid 5px white;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.botonBuscar{
+    width: 110px;
+    margin-left: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.contenedorResultados{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.resultados{
+    width: 80%;
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 3px;
+}

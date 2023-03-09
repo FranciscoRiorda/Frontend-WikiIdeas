@@ -1,0 +1,48 @@
+.contenedorCategorias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tituloCategoria{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.tituloCategoria>h3{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.cardsCategorias{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cardCategoria{
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+}
+.imgCat{
+    max-width: 300px;
+    min-height: 225px;
+    max-height: 225px;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+
+.contenedorCard{
+    background-color: rgb(213, 213, 213);
+    padding: 20px;
+    height: 300px;
+    border-radius: 5px;
+}
+.nombreCat{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.contenedorCard:hover{
+    border-bottom: solid 6px orangered;
+}

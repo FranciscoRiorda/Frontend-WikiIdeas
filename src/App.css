@@ -1,24 +1,5 @@
-.imgLogo{
-  width: 50px;
-}
-.colorNavbar{
-  background-color:#ffd871;
-}
-.colorBuscador{
-  background-color: rgba(163, 159, 159, 0.712);
-}
-.buscadorStyles{
-  margin-left: 200px;
-  margin-right: 200px;
-}
-.cardsCategorias{
-  gap: 10px;
-  margin-left: 200px;
-  margin-top: 50px;
- 
-}
-.imgCat{
-  width: 250px;
-  padding-left: 0px;
-  
-}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }

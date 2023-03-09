@@ -1,13 +1,12 @@
-import './App.css';
-import Buscador from './containers/Buscador/Buscador';
-import Navbar from './components/Navbar/Navbar';
-import Sections from './components/Sections/sections';
+import "./App.css";
+import Router from "./routes/routes";
+
 function App() {
   return (
     <>
-    <Navbar/>
-    <Buscador/>
-    <Sections/>
+    <div>
+      <Router />
+    </div>
     </>
   );
 }

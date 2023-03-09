@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import Resultados from "../../components/Resultados/Resultados";
+import Sections from "../../components/Sections/Sections";
 import "../Buscador/buscadorStyles.css";
 
 const Buscador = () => {
@@ -11,10 +12,9 @@ const Buscador = () => {
     (async () => {
       try {
         const response = await fetch(
-          `https://en.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=20`
+          `https://en.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=8`
         );
         const data = await response.json();
-        // console.log(data);
         setResultados(data.pages);
       } catch (error) {
         console.log(error);
@@ -32,30 +32,44 @@ const Buscador = () => {
   };
 
   const handleChange = (event) => {
-      let busqueda = event.target.value;
-      setSearch(busqueda);
-      console.log(search);
-  }
+    let busqueda = event.target.value;
+    setSearch(busqueda);
+    console.log(search);
+  };
 
   return (
     <>
-      <div className="colorBuscador">
-      <br/>
-      <h1 className="text-center">Buscar en Enciclopedia</h1>
-    <div className="text-center">
-    <form className="d-flex buscadorStyles"  onSubmit={handleSubmit}>
-      <input className="form-control me-2" name="search" type="text" autoComplete="off" placeholder="Buscar" aria-label="Search" />
-        <button className="btn btn-success" type="submit" onChange={handleChange}>Search</button>
-      </form>
-      <br/>
+      <div className="contenedorSlider">
+        <div className="fondo">
+          <div>
+            <h1>Buscar en Enciclopedia</h1>
+          </div>
+          <div>
+            <form className="formBuscador" onSubmit={handleSubmit}>
+              <input
+                className="inputForm"
+                name="search"
+                type="text"
+                autoComplete="off"
+                aria-label="Search"
+                onChange={handleChange}
+              />
+              <button className="botonBuscar btn btn-success" type="submit">
+                Buscar
+              </button>
+            </form>
+          </div>
+      <div className="contenedorResultados">
+          <div className="resultados">
+            {resultados && search !== "" ? <Resultados resultados={resultados} /> : null}
+          </div>
+        </div>
+        </div>
       </div>
-      <p className="text-center h3">Resultados: {search}</p>
-      <div className="card container" style={{width: '18rem'}} >
-       <div className="card-body" >
-        {resultados ? <Resultados resultados={resultados} /> : null}
-       </div>
+
+      <div>
+        <Sections />
       </div>
-    </div>
     </>
   );
 };
