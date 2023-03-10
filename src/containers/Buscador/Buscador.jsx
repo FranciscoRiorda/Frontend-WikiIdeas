@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import Resultados from "../../components/Resultados/Resultados";
-import Sections from "../../components/sections/sections";
+import Sections from "../../components/Sections/sections";
 import "../Buscador/buscadorStyles.css";
 
 const Buscador = () => {
