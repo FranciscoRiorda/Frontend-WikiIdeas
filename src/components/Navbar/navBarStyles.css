@@ -24,7 +24,7 @@
     padding: 0;
 }
 
-.contenedorUl>ul>li {
+.contenedorUl>ul>div {
     list-style: none;
     padding: 20px;
     margin-right: 20px;
@@ -39,7 +39,7 @@
     color:rgb(0, 0, 0);
 }
 
-.contenedorUl>ul>li:hover {
+.contenedorUl>ul>div:hover {
     background-color: #bb9f51;
 }
 

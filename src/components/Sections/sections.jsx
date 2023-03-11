@@ -9,27 +9,27 @@ import img6 from "../img/educacion.jfif";
 
 const Categorias = [
   {
-    nombre: "educacion",
+    nombre: "Educacion",
     img: img6,
   },
   {
-    nombre: "religion",
+    nombre: "Religion",
     img: img5,
   },
   {
-    nombre: "politica",
+    nombre: "Politica",
     img: img4,
   },
   {
-    nombre: "musica",
+    nombre: "Música",
     img: img3,
   },
   {
-    nombre: "entretenimiento",
+    nombre: "Entretenimiento",
     img: img2,
   },
   {
-    nombre: "deportes",
+    nombre: "Deportes",
     img: img1,
   },
 ];

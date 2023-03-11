@@ -17,17 +17,17 @@ const Navbar = () => {
           <div className="contenedorUl">
             <ul>
               
-              <li>
+              <div>
                 <Link className="link" to={"inicio"}>Inicio</Link>
-              </li>
+              </div>
 
-              <li>
+              <div>
                 <Categorias />
-              </li>
+              </div>
 
-              <li>
+              <div>
                 <Link className="link" to={"/nuevoArticulo"}>Crear Nuevo Artículo</Link>
-              </li>
+              </div>
 
             </ul>
           </div>

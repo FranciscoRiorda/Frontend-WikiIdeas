@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "../components/Root/Root";
 import Buscador from "../containers/Buscador/Buscador";
+import DetalleArticulo from "../containers/DetalleArticulo/DetalleArticulo";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/articulo/:idArticulo',
-        element: <h2>Detalle del articulo por id</h2>
+        element: <DetalleArticulo/>
       }
     ],
   },
