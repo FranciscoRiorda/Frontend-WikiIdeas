@@ -8,7 +8,6 @@ const Result = ({ result }) => {
       <Link to={`/articulo/${result.id}`}>
         <div className="listaResult">
           <li>{result.key}</li>
-          <li>{result.description}</li>
         </div>
       </Link>
     </>

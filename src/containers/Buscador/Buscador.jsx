@@ -1,28 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import Resultados from "../../components/Resultados/Resultados";
 import Sections from "../../components/Sections/sections";
+import { Articulo } from "../../contexts/articulo";
 import "../Buscador/buscadorStyles.css";
 
 const Buscador = () => {
   const [search, setSearch] = useState("");
   const [resultados, setResultados] = useState();
+  const {searchKey} = useContext(Articulo);
 
   useEffect(() => {
     (async () => {
       try {
         const response = await fetch(
-          // `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=8`
-          `https://es.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${search}`
+          `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=8`
         );
         const data = await response.json();
-        console.log(data)
+        searchKey(search);
         setResultados(data.pages);
       } catch (error) {
         console.log(error);
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
+  
 
   const handleSubmit = (event) => {
     let busqueda = event.target.search.value;
