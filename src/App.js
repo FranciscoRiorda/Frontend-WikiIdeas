@@ -1,20 +1,16 @@
-import './styles.css';
+import { Router } from 'react-router-dom';
 import './App.css';
-import Buscador from './containers/Buscador/Buscador';
-import Header from './components/header';
-import Main from './components/main'
-import NewTopic from './components/new_topic';
-import Footer from './components/footer';
+import Routers from './components/Routes/Routes';
+import './styles/styles.css';
+
+
+
 
 function App() {
   return (
-    <>
-      <Header />
-      <Buscador />
-      <Main />
-      <NewTopic />
-      <Footer />
-    </>
+    <div className="App">
+      <Routers />
+    </div>
   );
 }
 

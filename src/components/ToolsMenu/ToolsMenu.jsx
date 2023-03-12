@@ -1,3 +1,4 @@
+import './toolsMenuStyles.css';
 import React from "react";
 import { useState } from "react";
 import { FaBars, FaPlus, FaEdit, FaTrash, FaFlag } from 'react-icons/fa';
@@ -33,6 +34,9 @@ function ToolsMenu() {
             }  else if(action.target.outerText === 'Report'){
                 console.log('Reportar');
             }
+
+
+
 
     }
 

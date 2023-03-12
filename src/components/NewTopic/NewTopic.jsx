@@ -1,5 +1,8 @@
+import './newTopicStyles.css';
 import React from "react";
 import { useState, useRef } from "react";
+import ToolsMenu from "../ToolsMenu/ToolsMenu";
+
 
 function NewTopic() {
     const [title, setTitle] = useState("");
@@ -18,7 +21,6 @@ function NewTopic() {
         event.stopPropagation();
     } 
 
-
         const fileUpload = (event) => {
             const newFile = event.target.files[0];
             const reader = new FileReader();
@@ -30,6 +32,7 @@ function NewTopic() {
             };
             reader.readAsDataURL(newFile);
         }
+
 
     return(
         <div className="new-topic" onClick={closeWindow}>

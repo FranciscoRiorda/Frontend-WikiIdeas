@@ -1,5 +1,7 @@
+import './headerStyles.css';
 import { React, useRef } from 'react';
-import ToolsMenu from '../Tools_menu/tools_menu';
+import image from '../img/logo_empty.png';
+import ToolsMenu from '../ToolsMenu/ToolsMenu';
 
 
 
@@ -8,7 +10,7 @@ function Header(){
         <header id="header">
 
             <div id="header-logo">
-                <img src="./img/logo_empty.png" alt="Wiki Ideas" />
+                <img src={image} alt="Wiki Ideas" />
             </div>
             <nav id="header-navbar">
                 <a href="#">Menu 1</a>
