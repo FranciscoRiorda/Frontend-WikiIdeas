@@ -8,16 +8,42 @@ import "../Buscador/buscadorStyles.css";
 const Buscador = () => {
   const [search, setSearch] = useState("");
   const [resultados, setResultados] = useState();
-  const {searchKey} = useContext(Articulo);
+  const { searchKey } = useContext(Articulo);
+
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       const options = {
+  //         method: "GET",
+  //         headers: {
+  //           "X-RapidAPI-Key":
+  //             "2183111fccmshe1ee4f00d662488p1a3704jsncc04d6874c65",
+  //           "X-RapidAPI-Host": "wiki-briefs.p.rapidapi.com",
+  //         },
+  //       };
+  //       const response = await fetch(
+  //         `https://wiki-briefs.p.rapidapi.com/search?q=${search}&topk=3`,
+  //         options
+  //       );
+  //       const data = await response.json();
+  //       console.log(data);
+  //       setResultados(data.similar);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   })();
+  // }, [search]);
 
   useEffect(() => {
     (async () => {
       try {
         const response = await fetch(
-          `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=8`
+          `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=15`
+          // `https://newsapi.org/v2/everything?q=${search}&apiKey=890d59d25ca54eefb7b4a69116cc48db`
         );
         const data = await response.json();
         searchKey(search);
+        console.log(data);
         setResultados(data.pages);
       } catch (error) {
         console.log(error);
@@ -25,7 +51,6 @@ const Buscador = () => {
     })();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
-  
 
   const handleSubmit = (event) => {
     let busqueda = event.target.search.value;
@@ -39,11 +64,10 @@ const Buscador = () => {
   };
 
   const clear = (event) => {
-    if(event.code === 'Escape') {
-      setResultados('');
+    if (event.code === "Escape") {
+      setResultados("");
     }
-  }
-  
+  };
 
   return (
     <>
@@ -69,11 +93,11 @@ const Buscador = () => {
             </form>
           </div>
           <div className="contenedorResultados">
-            <div className="resultados">
-              {resultados && search !== "" ? (
+            {resultados && search !== "" ? (
+              <div className="resultados">
                 <Resultados resultados={resultados} />
-              ) : null}
-            </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

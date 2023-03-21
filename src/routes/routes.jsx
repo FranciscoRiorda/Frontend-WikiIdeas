@@ -1,6 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "../components/Root/Root";
+import AbmArticulo from "../containers/AbmArticulo/AbmArticulo";
 import Buscador from "../containers/Buscador/Buscador";
 import DetalleArticulo from "../containers/DetalleArticulo/DetalleArticulo";
 
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/nuevoArticulo',
-        element: <h2>Crear nuevo artículo</h2>
+        element: <AbmArticulo/>
       },
       {
         path: '/articulo/:idArticulo',

@@ -44,6 +44,7 @@ const DetalleArticulo = () => {
                 <p>{data.title}</p>
                 <p>{data.excpert}</p>
                 <p>{data.description}</p>
+                <p>{data.excerpt}</p>
             </div>
         </div>
       </div>

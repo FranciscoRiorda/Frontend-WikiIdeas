@@ -7,7 +7,7 @@ const Result = ({ result }) => {
     <>
       <Link to={`/articulo/${result.id}`}>
         <div className="listaResult">
-          <li>{result.key}</li>
+          <li>{result.title}</li>
         </div>
       </Link>
     </>
