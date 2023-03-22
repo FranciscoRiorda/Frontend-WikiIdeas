@@ -9,14 +9,14 @@ const AbmArticulo = () => {
         <div className="transparencia">
           <div className="tituloAbm">
             <p>Crear nuevo Artículo</p>
-            <p className="circlePlus">
+            <a href='#form' className="circlePlus">
               <FaPlusCircle />
-            </p>
+            </a>
           </div>
         </div>
       </div>
 
-      <form action="" className="form-group col-12 column">
+      <form id="form" action="" className="form-group col-12 column">
         <div className="form-group col-12 formulario2">
           <div className="form-group col-6">
             <input
@@ -35,7 +35,7 @@ const AbmArticulo = () => {
             ></textarea>
           </div>
           <div className="form-group col-6 categoria">
-            <label for="categoria">Seleccione una categoría</label>
+            <label for="categoria">Seleccione una categoría:</label>
             <select
               className="form-control"
               id="categoria"

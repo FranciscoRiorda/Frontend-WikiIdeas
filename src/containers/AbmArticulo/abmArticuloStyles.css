@@ -16,7 +16,12 @@
     align-self: center;
     margin: 10px;
     transition: 1s;
-    
+}
+.tituloAbm>a{
+    align-self: center;
+    margin: 10px;
+    transition: 1s;
+    color: white;
 }
 .transparencia{
     background-color: rgba(255, 255, 255, 0.112);
