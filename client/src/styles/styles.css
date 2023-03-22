@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Golos+Text&display=swap');
+
+:root {
+    --black: #06070E;
+    --brunswickgreen: #29524A;
+    --cambridgeblue: #94A187;
+    --khaki: #C5AFA0;
+    --tearose: #E9BCB7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0px solid black;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+    background: #eee;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+#main {
+    width: 100%;
+}
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+*::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+*::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px; 
+    background: rgba(233,233,233,0.5);
+
+}
+
+
+.principal-text p {
+    text-align: justify;
+    margin: 7px 12px;
+}
+
+
+
+
+
+@media screen and (max-width: 1278px) {
+    #main-category, #principal-grid, #footer-flex {
+        width: 920px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #main-category, #footer-flex {
+        width: 730px;
+    }
+
+    #category-grid {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+
+    #principal-grid {
+        width: 620px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr, 1fr;
+    }  
+}
+
+@media screen and (max-width: 764px) {
+    #search-form, #search-img {
+        width: 80%;
+    }
+
+    #search-text {
+        width: 100%;
+    }
+
+    #main-category {
+        width: 420px;
+    }
+
+    #category-grid {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,1fr);
+    }
+
+    #principal-grid, #footer-flex {
+        width: 523px;
+    }  
+}
+
+@media screen and (max-width: 574px) {
+    #main-category, #principal-grid, #footer-flex {
+        width: 380px;
+    }
+
+    .principal-section {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .principal-img, .principal-text {
+        width: 100%;
+        display: block;
+        border-radius: 10px 10px 0px 0px;
+    }
+}
