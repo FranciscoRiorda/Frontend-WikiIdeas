@@ -16,6 +16,7 @@ const DetalleArticulo = () => {
       (async()=>{
             try {
               const response = await fetch(
+                //Cambiar url y buscar por id
                 `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${articulos}&limit=8`
               );
               const dataResponse = await response.json();
