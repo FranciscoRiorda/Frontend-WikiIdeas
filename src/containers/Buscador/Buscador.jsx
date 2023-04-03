@@ -38,13 +38,18 @@ const Buscador = () => {
     (async () => {
       try {
         const response = await fetch(
-          `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=15`
+          // `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=15`
           // `https://newsapi.org/v2/everything?q=${search}&apiKey=890d59d25ca54eefb7b4a69116cc48db`
+          // `https://www.googleapis.com/blogger/v3/blogs/apple?key=AIzaSyDJvTf4lqwz5NXZRiM6fGaYdM7xzcQME8w`
+          // `http://api.mediastack.com/v1/sources?access_key=9e4e41480de4c5fd0f97697c39f8f520&search=abc`
+          // `http://api.mediastack.com/v1/news?access_key=cc3a39b0ef5a3245e86b5108017313bb`
+          // `https://newsapi.org/v2/everything?q=Apple&from=2023-04-03&sortBy=popularity&apiKey=890d59d25ca54eefb7b4a69116cc48db`
+             `https://newsapi.org/v2/top-headlines?country=ar&q=${search}&apiKey=890d59d25ca54eefb7b4a69116cc48db`
         );
         const data = await response.json();
         searchKey(search);
         console.log(data);
-        setResultados(data.pages);
+        setResultados(data.articles);
       } catch (error) {
         console.log(error);
       }
@@ -84,7 +89,7 @@ const Buscador = () => {
                 type="text"
                 autoComplete="off"
                 aria-label="Search"
-                onChange={handleChange}
+                // onChange={handleChange}
                 onKeyDown={clear}
               />
               <button className="botonBuscar btn btn-success" type="submit">
