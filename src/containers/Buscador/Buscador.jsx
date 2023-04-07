@@ -10,36 +10,14 @@ const Buscador = () => {
   const [resultados, setResultados] = useState();
   const { searchKey } = useContext(Articulo);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     try {
-  //       const options = {
-  //         method: "GET",
-  //         headers: {
-  //           "X-RapidAPI-Key":
-  //             "2183111fccmshe1ee4f00d662488p1a3704jsncc04d6874c65",
-  //           "X-RapidAPI-Host": "wiki-briefs.p.rapidapi.com",
-  //         },
-  //       };
-  //       const response = await fetch(
-  //         `https://wiki-briefs.p.rapidapi.com/search?q=${search}&topk=3`,
-  //         options
-  //       );
-  //       const data = await response.json();
-  //       console.log(data);
-  //       setResultados(data.similar);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   })();
-  // }, [search]);
 
   useEffect(() => {
     (async () => {
       try {
         const response = await fetch(
           // `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=15`
-             `https://newsapi.org/v2/top-headlines?country=ar&q=${search}&apiKey=890d59d25ca54eefb7b4a69116cc48db`
+            //  `https://newsapi.org/v2/top-headlines/sources?country=ar&q=${search}&apiKey=890d59d25ca54eefb7b4a69116cc48db`
+            `https://newsapi.org/v2/everything?q=${search}&sortBy=popularity&apiKey=890d59d25ca54eefb7b4a69116cc48db`
         );
         const data = await response.json();
         searchKey(search);
@@ -50,7 +28,7 @@ const Buscador = () => {
       }
     })();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search]);
+}, [search]);
 
   const handleSubmit = (event) => {
     let busqueda = event.target.search.value;
@@ -58,10 +36,10 @@ const Buscador = () => {
     event.preventDefault();
   };
 
-  const handleChange = (event) => {
-    let busqueda = event.target.value;
-    setSearch(busqueda);
-  };
+  // const handleChange = (event) => {
+  //   let busqueda = event.target.value;
+  //   setSearch(busqueda);
+  // };
 
   const clear = (event) => {
     if (event.code === "Escape") {

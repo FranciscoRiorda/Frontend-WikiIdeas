@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         element: <AbmArticulo/>
       },
       {
-        path: '/articulo/:idArticulo',
+        path: '/articulo/:idArticulo/:idSource',
         element: <DetalleArticulo/>
       }
     ],

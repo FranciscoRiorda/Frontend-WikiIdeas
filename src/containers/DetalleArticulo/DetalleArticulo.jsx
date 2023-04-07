@@ -12,26 +12,26 @@ const DetalleArticulo = () => {
     const {idArticulo} = useParams();
     const {articulos} = useContext(Articulo);
 
-    useEffect(()=>{
-      (async()=>{
-            try {
-              const response = await fetch(
-                //Cambiar url y buscar por id
-                `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${articulos}&limit=8`
-              );
-              const dataResponse = await response.json();
-              const dataResp = dataResponse.pages;
-              const dataId = dataResp.filter((idArt) => idArt.id == idArticulo)
-              setData(dataId[0]);
+    // useEffect(()=>{
+    //   (async()=>{
+    //         try {
+    //           const response = await fetch(
+    //             //Cambiar url y buscar por id
+    //             `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${articulos}&limit=8`
+    //           );
+    //           const dataResponse = await response.json();
+    //           const dataResp = dataResponse.pages;
+    //           const dataId = dataResp.filter((idArt) => idArt.id == idArticulo)
+    //           setData(dataId[0]);
                 
-            } catch (error) {
-                console.log(error);
-            }
+    //         } catch (error) {
+    //             console.log(error);
+    //         }
 
-        })();
-    }, [articulos, idArticulo]);
+    //     })();
+    // }, [articulos, idArticulo]);
 
-    console.log(data)
+    // console.log(data)
 
   return (
     <>

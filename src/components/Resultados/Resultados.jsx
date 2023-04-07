@@ -5,7 +5,7 @@ const Resultados = ({resultados}) => {
 
     return(
         resultados.map((result) => {
-            return <Result key={result.id} result={result} />
+            return <Result key={result.title} result={result} />
         })
     )
 }

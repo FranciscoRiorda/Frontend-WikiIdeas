@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Result = ({ result }) => {
   return (
     <>
-      <Link to={`/articulo/${result.id}`}>
+      <Link to={`/articulo/${result.publishedAt}/${result.source.id}`}>
         <div className="listaResult">
           <li>{result.title}</li>
         </div>
