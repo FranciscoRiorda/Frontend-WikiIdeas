@@ -1,16 +1,17 @@
 /* eslint-disable eqeqeq */
-import React, { useEffect } from "react";
-import { useContext } from "react";
+import React from "react";
+// import { useContext } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { Articulo } from "../../contexts/articulo";
+// import { useParams } from "react-router-dom";
+// import { Articulo } from "../../contexts/articulo";
 import "./detalleArticuloStyles.css";
 
 const DetalleArticulo = () => {
 
+    // eslint-disable-next-line no-unused-vars
     const [data, setData] = useState('');
-    const {idArticulo} = useParams();
-    const {articulos} = useContext(Articulo);
+    // const {idArticulo} = useParams();
+    // const {articulos} = useContext(Articulo);
 
     // useEffect(()=>{
     //   (async()=>{
