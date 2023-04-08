@@ -10,14 +10,13 @@ const Buscador = () => {
   const [resultados, setResultados] = useState();
   const { searchKey } = useContext(Articulo);
 
-
   useEffect(() => {
     (async () => {
       try {
         const response = await fetch(
           // `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=15`
-            //  `https://newsapi.org/v2/top-headlines/sources?country=ar&q=${search}&apiKey=890d59d25ca54eefb7b4a69116cc48db`
-            `https://newsapi.org/v2/everything?q=${search}&sortBy=popularity&apiKey=890d59d25ca54eefb7b4a69116cc48db`
+          //  `https://newsapi.org/v2/top-headlines/sources?country=ar&q=${search}&apiKey=890d59d25ca54eefb7b4a69116cc48db`
+          `https://newsapi.org/v2/everything?q=${search}&sortBy=popularity&apiKey=890d59d25ca54eefb7b4a69116cc48db`
         );
         const data = await response.json();
         searchKey(search);
@@ -27,8 +26,8 @@ const Buscador = () => {
         console.log(error);
       }
     })();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [search]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search]);
 
   const handleSubmit = (event) => {
     let busqueda = event.target.search.value;

@@ -26,12 +26,12 @@
 
 .contenedorUl>ul>div {
     list-style: none;
-    padding: 20px;
+    padding: 10px;
     margin-right: 20px;
     cursor: pointer;
     border-radius: 10px;
     transition: 0.8s;
-    font-size: large;
+    font-size: 0.9rem;
     font-weight:bolder;
 }
 .link{

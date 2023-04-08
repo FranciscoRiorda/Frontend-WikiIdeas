@@ -6,43 +6,59 @@ import img3 from "../img/musica.jpg";
 import img4 from "../img/politica.jfif";
 import img5 from "../img/religion.jpg";
 import img6 from "../img/educacion.jfif";
+import { Link } from "react-router-dom";
 
-const Categorias = [
+const CategoriasHtml = [
   {
-    nombre: "Educacion",
+    nombre: "Negocio",
     img: img6,
-  },
-  {
-    nombre: "Religion",
-    img: img5,
-  },
-  {
-    nombre: "Politica",
-    img: img4,
-  },
-  {
-    nombre: "Música",
-    img: img3,
+    url: `business`,
   },
   {
     nombre: "Entretenimiento",
+    img: img6,
+    url: `entertainment`,
+  },
+  {
+    nombre: "General",
+    img: img5,
+    url: `general`,
+  },
+  {
+    nombre: "Salud",
+    img: img4,
+    url: `health`,
+  },
+  {
+    nombre: "Ciencia",
+    img: img3,
+    url: `science`,
+  },
+  {
+    nombre: "Tecnología",
     img: img2,
+    url: `technology`,
   },
   {
     nombre: "Deportes",
     img: img1,
+    url: `sports`,
   },
 ];
 
-const Sections = () => {
-  const catWiki = Categorias.map((cat) => (
+const Categorias = () => {
+  const catWiki = CategoriasHtml.map((cat) => (
     <div className="cardCategoria">
       <div className="contenedorCard">
-        <img src={cat.img} className="imgCat" alt="..." />
-        <p className="nombreCat">{cat.nombre}</p>
+        <Link to={`/categoria/${cat.url}`}>
+          <img src={cat.img} className="imgCat" alt="..." />
+          <p className="nombreCat">{cat.nombre}</p>
+        </Link>
       </div>
     </div>
   ));
+
+  console.log(catWiki.nombre);
 
   return (
     <>
@@ -56,4 +72,4 @@ const Sections = () => {
   );
 };
 
-export default Sections;
+export default Categorias;
