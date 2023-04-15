@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import RenderingCat from "./RenderingCat/RenderingCat";
+import MapSection from "./mapSection/MapSection";
+import './stylesSectionCateg.css';
 
 const SectionCateg = () => {
   const [catSeleccionada, setCatSeleccionada] = useState();
@@ -12,7 +13,7 @@ const SectionCateg = () => {
     (async () => {
       try {
         const response = await fetch(
-          `https://newsapi.org/v2/top-headlines?country=ar&category=${idCategoria}&apiKey=890d59d25ca54eefb7b4a69116cc48db`
+          `https://newsapi.org/v2/top-headlines?country=ar&pageSize=12&category=${idCategoria}&apiKey=890d59d25ca54eefb7b4a69116cc48db`
         );
         const data = await response.json();
         setCatSeleccionada(data.articles);
@@ -20,16 +21,15 @@ const SectionCateg = () => {
         console.log(error);
       }
     })();
-  }, []);
+  }, [idCategoria]);
 
-  console.log(catSeleccionada)
+  console.log(catSeleccionada);
 
-  return(
-    catSeleccionada.map((categoria) => {
-      return <RenderingCat key={categoria.publishedAt} categoria={categoria} />
-    })
-
-    );
+  return (
+    <div className="mapSelection">
+      <MapSection catSeleccionada={catSeleccionada} />
+    </div>
+  );
 };
 
 export default SectionCateg;

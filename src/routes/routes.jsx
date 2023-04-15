@@ -4,7 +4,6 @@ import Root from "../components/Root/Root";
 import SectionCateg from "../components/SectionCateg/SectionCateg";
 import AbmArticulo from "../containers/AbmArticulo/AbmArticulo";
 import Buscador from "../containers/Buscador/Buscador";
-import DetalleArticulo from "../containers/DetalleArticulo/DetalleArticulo";
 
 const router = createBrowserRouter([
   {
@@ -28,10 +27,10 @@ const router = createBrowserRouter([
         path: '/categoria/:idCategoria',
         element: <SectionCateg/>
       },
-      {
-        path: '/articulo/:idArticulo/:idSource',
-        element: <DetalleArticulo/>
-      }
+      // {
+      //   path: '/articulo/:idArticulo/:idSource',
+      //   element: <DetalleArticulo/>
+      // }
     ],
   },
 ]);

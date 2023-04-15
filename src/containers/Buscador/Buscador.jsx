@@ -20,7 +20,6 @@ const Buscador = () => {
         );
         const data = await response.json();
         searchKey(search);
-        console.log(data);
         setResultados(data.articles);
       } catch (error) {
         console.log(error);
@@ -45,6 +44,8 @@ const Buscador = () => {
       setResultados("");
     }
   };
+
+  console.log(resultados)
 
   return (
     <>

@@ -46,19 +46,17 @@ const CategoriasHtml = [
   },
 ];
 
-const Categorias = () => {
+const Sections = () => {
   const catWiki = CategoriasHtml.map((cat) => (
-    <div className="cardCategoria">
+    <div className="cardCategoria" key={cat.url}>
       <div className="contenedorCard">
-        <Link to={`/categoria/${cat.url}`}>
+        <Link to={`/categoria/${cat.url}`}  >
           <img src={cat.img} className="imgCat" alt="..." />
           <p className="nombreCat">{cat.nombre}</p>
         </Link>
       </div>
     </div>
   ));
-
-  console.log(catWiki.nombre);
 
   return (
     <>
@@ -72,4 +70,4 @@ const Categorias = () => {
   );
 };
 
-export default Categorias;
+export default Sections;
