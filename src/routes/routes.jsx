@@ -2,7 +2,6 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "../components/Root/Root";
 import SectionCateg from "../components/SectionCateg/SectionCateg";
-import AbmArticulo from "../containers/AbmArticulo/AbmArticulo";
 import Buscador from "../containers/Buscador/Buscador";
 
 const router = createBrowserRouter([
@@ -20,17 +19,9 @@ const router = createBrowserRouter([
         element: <Buscador/>
       },
       {
-        path: '/nuevoArticulo',
-        element: <AbmArticulo/>
-      },
-      {
         path: '/categoria/:idCategoria',
         element: <SectionCateg/>
       },
-      // {
-      //   path: '/articulo/:idArticulo/:idSource',
-      //   element: <DetalleArticulo/>
-      // }
     ],
   },
 ]);

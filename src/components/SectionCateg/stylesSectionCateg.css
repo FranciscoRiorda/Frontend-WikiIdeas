@@ -1,4 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 .mapSelection{
+    width: 100%;
+    justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 5%;
+}
+.banner{
+    background-image: url('../img/banner.jpg');
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.pBanner{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin: 60px;
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+@media screen and (max-width: 575px) {
+    .pBanner{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pBanner{
+        font-size: 1.3rem;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .pBanner{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pBanner{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .pBanner{
+        font-size: 2rem;
+    }
 }

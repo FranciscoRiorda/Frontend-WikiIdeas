@@ -3,3 +3,7 @@
     margin: 0;
     box-sizing: border-box;
   }
+
+  Body{
+    background-image: url('../public/img/fondoBodyPastel.jpg');
+  }

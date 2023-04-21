@@ -5,7 +5,9 @@ import Sections from "../../components/Sections/sections";
 import { Articulo } from "../../contexts/articulo";
 import "../Buscador/buscadorStyles.css";
 
+
 const Buscador = () => {
+  
   const [search, setSearch] = useState("");
   const [resultados, setResultados] = useState();
   const { searchKey } = useContext(Articulo);
@@ -14,8 +16,6 @@ const Buscador = () => {
     (async () => {
       try {
         const response = await fetch(
-          // `https://es.wikipedia.org/w/rest.php/v1/search/page?q=${search}&limit=15`
-          //  `https://newsapi.org/v2/top-headlines/sources?country=ar&q=${search}&apiKey=890d59d25ca54eefb7b4a69116cc48db`
           `https://newsapi.org/v2/everything?q=${search}&sortBy=popularity&apiKey=890d59d25ca54eefb7b4a69116cc48db`
         );
         const data = await response.json();
@@ -49,10 +49,10 @@ const Buscador = () => {
 
   return (
     <>
-      <div className="contenedorSlider">
+      <div data-aos="fade-up" className="contenedorSlider">
         <div className="fondo">
           <div>
-            <h1>Buscar en Enciclopedia</h1>
+            <h1>Buscar Noticias</h1>
           </div>
           <div>
             <form className="formBuscador" onSubmit={handleSubmit}>

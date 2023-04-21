@@ -12,7 +12,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .fondo>div>h1{
@@ -24,11 +24,10 @@
 .formBuscador{
     display: flex;
     justify-content: center;
-    margin-top: 60px;
 }
 .inputForm{
     width: 50%;
-    height: 70px;
+    height: 50px;
     background: none;
     border: solid 5px white;
     color: white;
@@ -58,4 +57,35 @@
     border-radius: 3px;
     overflow: scroll;
     height: 400px;
+}
+
+@media screen and (max-width: 575px) {
+    .fondo>div>h1{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .fondo>div>h1{
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .fondo>div>h1{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .fondo>div>h1{
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .fondo>div>h1{
+        font-size: 4rem;
+    }
 }

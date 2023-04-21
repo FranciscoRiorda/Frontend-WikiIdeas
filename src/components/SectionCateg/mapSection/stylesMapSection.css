@@ -1,4 +1,19 @@
-.spinner{
-    display: flex;
-    margin: 10% 50% 10% 50%;
+.spinner {
+    margin: 0% 50% 0% 50%;
+}
+
+.rendering {
+    width: 45%;
+}
+
+@media screen and (max-width: 575px) {
+    .rendering {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .rendering {
+        width: 45%;
+    }
 }

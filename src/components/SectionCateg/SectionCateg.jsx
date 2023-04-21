@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import MapSection from "./mapSection/MapSection";
-import './stylesSectionCateg.css';
+import "./stylesSectionCateg.css";
 
 const SectionCateg = () => {
   const [catSeleccionada, setCatSeleccionada] = useState();
@@ -23,12 +23,15 @@ const SectionCateg = () => {
     })();
   }, [idCategoria]);
 
-  console.log(catSeleccionada);
-
   return (
-    <div className="mapSelection">
-      <MapSection catSeleccionada={catSeleccionada} />
-    </div>
+    <>
+      <div className="banner">
+        <p className="pBanner">{idCategoria.toLocaleUpperCase()}</p>
+      </div>
+      <div className="mapSelection">
+        <MapSection catSeleccionada={catSeleccionada} />
+      </div>
+    </>
   );
 };
 

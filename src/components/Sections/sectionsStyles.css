@@ -1,48 +1,94 @@
-.contenedorCategorias{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.tituloCategoria{
+.contenedorCategorias {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
-}
-.tituloCategoria>h3{
-    font-size: 3rem;
-    font-weight: bold;
-}
-.cardsCategorias{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.cardCategoria{
-    margin: 20px;
-    padding: 20px;
-    cursor: pointer;
-}
-.imgCat{
-    max-width: 300px;
-    min-height: 225px;
-    max-height: 225px;
-    border-radius: 10px;
-    transition: 0.8s;
 }
 
-.contenedorCard{
-    background-color: rgb(213, 213, 213);
-    padding: 20px;
+.cardsCategorias {
+    width: 90%;
+}
+
+/* Card */
+
+.cardCategoria {
     height: 300px;
+}
+
+.contenedorCard {
+    padding: 0px 20px 0px 20px;
     border-radius: 5px;
 }
-.nombreCat{
+
+.imgCat {
+    cursor: pointer;
+    width: 100%;
+    max-height: 250px;
+    transition: 0.8s;
+    border-radius: 10px;
+    position: relative;
+}
+
+.divNombre {
     display: flex;
     justify-content: center;
-    font-size: large;
-    font-weight: bold;
-    margin-top: 10px;
 }
-.contenedorCard:hover{
-    border-bottom: solid 6px orangered;
+
+.nombreCat {
+    font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    margin-top: 105px;
+}
+
+.imgCat:hover {
+    box-shadow: 5px 5px 10px grey;
+    transform: scale(1.01);
+}
+
+@media screen and (max-width: 575px) {
+    .cardCategoria {
+        height: 200px;
+    }
+    .nombreCat {
+        font-size: 1rem;
+        margin-top: 12%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .cardCategoria {
+        height: 250px;
+    }
+    .nombreCat {
+        font-size: 1.3rem;
+        margin-top: 13%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cardCategoria {
+        height: 280px;
+    }
+    .nombreCat {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .cardCategoria {
+        height: 300px;
+    }
+    .nombreCat {
+        font-size: 1.8rem;
+        margin-top: 11%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nombreCat {
+        font-size: 2rem;
+        margin-top: 9%;
+    }
 }
