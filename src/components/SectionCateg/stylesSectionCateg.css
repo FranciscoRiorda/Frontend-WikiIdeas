@@ -4,7 +4,7 @@
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 5%;
+    margin: 5% 0% 5% 0%;
 }
 .banner{
     background-image: url('../img/banner.jpg');
