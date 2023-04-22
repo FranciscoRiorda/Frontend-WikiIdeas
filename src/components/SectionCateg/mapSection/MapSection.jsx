@@ -2,15 +2,28 @@ import React from "react";
 import RenderingCat from "../RenderingCat/RenderingCat";
 import Spinner from "react-bootstrap/Spinner";
 import "./stylesMapSection.css";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const MapSection = ({ catSeleccionada }) => {
+
+ let [deploy, setDeploy] = useState('');
+
+ useEffect(()=> {
+  setTimeout(() => {
+    setDeploy('API no disponible para producción');
+  }, 5000);
+},[deploy]);
+console.log(deploy)
+
+
   return !catSeleccionada ? (
     <div>
       <div className="spinner">
         <Spinner animation="grow" />
       </div>
       <div className="texto">
-        <p>API no disponible en deploy</p>
+        <p>{deploy}</p>
       </div>
     </div>
   ) : (
