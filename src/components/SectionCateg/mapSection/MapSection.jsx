@@ -12,10 +12,8 @@ const MapSection = ({ catSeleccionada }) => {
  useEffect(()=> {
   setTimeout(() => {
     setDeploy('API no disponible para producción');
-  }, 5000);
+  }, 3000);
 },[deploy]);
-console.log(deploy)
-
 
   return !catSeleccionada ? (
     <div>

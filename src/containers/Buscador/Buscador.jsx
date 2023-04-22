@@ -34,10 +34,10 @@ const Buscador = () => {
     event.preventDefault();
   };
 
-  // const handleChange = (event) => {
-  //   let busqueda = event.target.value;
-  //   setSearch(busqueda);
-  // };
+  const handleChange = (event) => {
+    let busqueda = event.target.value;
+    setSearch(busqueda);
+  };
 
   const clear = (event) => {
     if (event.code === "Escape") {
@@ -62,7 +62,7 @@ const Buscador = () => {
                 type="text"
                 autoComplete="off"
                 aria-label="Search"
-                // onChange={handleChange}
+                onChange={handleChange}
                 onKeyDown={clear}
               />
               <button className="botonBuscar btn btn-success" type="submit">
