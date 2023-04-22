@@ -2,6 +2,10 @@
     margin: 0% 50% 0% 50%;
 }
 
+.texto{
+    width: 100%;
+}
+
 .rendering {
     width: 45%;
 }
